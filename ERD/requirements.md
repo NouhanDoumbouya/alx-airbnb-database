@@ -208,3 +208,4 @@ This document outlines the entities, attributes, and relationships that define t
 - `email` in the **User** table (for login and uniqueness checks)
 - `property_id` in both **Property** and **Booking** tables (to optimize joins and lookups)
 - `booking_id` in **Booking** and **Payment** tables (to link and search efficiently)
+
