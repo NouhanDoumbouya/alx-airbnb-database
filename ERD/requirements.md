@@ -209,3 +209,8 @@ This document outlines the entities, attributes, and relationships that define t
 - `property_id` in both **Property** and **Booking** tables (to optimize joins and lookups)
 - `booking_id` in **Booking** and **Payment** tables (to link and search efficiently)
 
+
+---
+
+### ER DIAGRAM USING `LUCID CHART`
+![ER_DIAGRAM](https://github.com/NouhanDoumbouya/alx-airbnb-database/blob/main/images/ERD_DIAGRAM.png)
