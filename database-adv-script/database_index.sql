@@ -12,3 +12,7 @@ CREATE INDEX IF NOT EXISTS idx_properties_id ON Properties(id);
 
 -- Index on Bookings.created_at to speed up date-based queries
 CREATE INDEX IF NOT EXISTS idx_bookings_created_at ON Bookings(created_at);
+
+-- Step 3: Check performance AFTER indexing
+EXPLAIN ANALYZE
+SELECT * FROM Bookings WHERE user_id = 5;
