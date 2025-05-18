@@ -16,6 +16,23 @@
 ### 2. Users with More Than 3 Bookings
 This correlated subquery identifies users who have made more than 3 bookings by comparing each user with a count of their bookings.
 
-## Files
-- `subqueries.sql`: SQL queries for the task.
-- `README.md`: Documentation of the subqueries.
+    Files
+    - `subqueries.sql`: SQL queries for the task.
+    - `README.md`: Documentation of the subqueries.
+
+## Task 3: Aggregations and Window Functions
+
+    Objective:
+    Use SQL aggregation and window functions to analyze Airbnb booking data.
+
+    Tasks:
+
+        1. Total Bookings Per User
+        Aggregated the total number of bookings made by each user using `COUNT` and `GROUP BY`.
+
+        2. Rank Properties by Booking Count
+        Used a window function (`RANK()`) to rank properties based on the total number of bookings they've received.
+
+    Files
+    - `aggregations_and_window_functions.sql`: Contains SQL queries for aggregation and window functions.
+    - `README.md`: Documentation of the implemented SQL logic.
