@@ -7,6 +7,6 @@ GROUP BY user_id;
 SELECT 
     property_id,
     COUNT(*) AS total_bookings,
-    RANK() OVER (ORDER BY COUNT(*) DESC) AS booking_rank
+    RANK_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS booking_rank
 FROM Bookings
 GROUP BY property_id;
