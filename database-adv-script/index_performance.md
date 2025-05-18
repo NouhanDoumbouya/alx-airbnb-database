@@ -15,6 +15,17 @@ Improve query performance by creating indexes on high-usage columns in Users, Bo
 
 ## Performance Test
 
-### Query: 
-```sql
+-- Step 1: Check performance BEFORE indexing (optional if not recorded previously)
+EXPLAIN ANALYZE
+SELECT * FROM Bookings WHERE user_id = 5;
+
+-- Step 2: Create Indexes
+CREATE INDEX IF NOT EXISTS idx_users_id ON Users(id);
+CREATE INDEX IF NOT EXISTS idx_bookings_user_id ON Bookings(user_id);
+CREATE INDEX IF NOT EXISTS idx_bookings_property_id ON Bookings(property_id);
+CREATE INDEX IF NOT EXISTS idx_properties_id ON Properties(id);
+CREATE INDEX IF NOT EXISTS idx_bookings_created_at ON Bookings(created_at);
+
+-- Step 3: Check performance AFTER indexing
+EXPLAIN ANALYZE
 SELECT * FROM Bookings WHERE user_id = 5;
